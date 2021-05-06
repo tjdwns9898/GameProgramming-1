@@ -1,7 +1,11 @@
 sceneSetups:
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 - path: Assets/Scenes/gameui.unity
+=======
+- path: Assets/Scenes/TotalViewScene.unity
+>>>>>>> parent of 1b20a03 (GameManager)
 =======
 - path: Assets/Scenes/TotalViewScene.unity
 >>>>>>> parent of 1b20a03 (GameManager)
