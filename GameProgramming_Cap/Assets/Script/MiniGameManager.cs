@@ -14,6 +14,8 @@ public class MiniGameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        MainCharacter = GameManager.Instance.MainCharacter_Plant;
+
         //메인캐릭터(메인식물)이 정해져있는 상태라면 
         if (GameManager.Instance.MainCharacter_Plant != null)
         {

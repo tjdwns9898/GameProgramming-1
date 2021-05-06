@@ -1,3 +1,13 @@
 {
-    "Money": 5555
+    "Money": 5,
+    "plants": [
+        {
+            "Plant_pos": 1,
+            "Plant_time": "12"
+        },
+        {
+            "Plant_pos": 2,
+            "Plant_time": "23"
+        }
+    ]
 }

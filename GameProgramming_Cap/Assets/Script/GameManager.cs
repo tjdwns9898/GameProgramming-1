@@ -9,16 +9,24 @@ public class GameManager : MonoBehaviour
 
     public GameObject MainCharacter_Plant; //중앙에 서있을 식물 이미지 이름
 
+    public string Plant_time;   // 식물 심은 시간
 
     //저장 데이터 형식
     [System.Serializable]
     public class Data
     {
-        public int Money;
+        public int Money; // 유저 돈
+        public Plant[] plants; // 생성된 식물 행렬
+    }
+
+    [System.Serializable]
+    public struct Plant
+    {
+        public int Plant_pos; // 식물 위치좌표 (번째)
+        public string Plant_time; // 식물 생성 시간
     }
 
     public Data data;
-
 
     /// //////////////////////////////////////////////////////////////////////////////////
     /// 싱글톤 생성
@@ -28,6 +36,7 @@ public class GameManager : MonoBehaviour
         if (instance == null)
         {
             instance = this;
+
 
             //씬 전환이 되어도 파괴되지 않는다.
             DontDestroyOnLoad(this.gameObject);
@@ -53,7 +62,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    /// //////////////////////////////////////////////////////////////////////////////////
+    /// ////////////////////////////////////////////////////////////////////////////////// 저장 & 로드
 
     public void GameSave()
     {
@@ -68,4 +77,5 @@ public class GameManager : MonoBehaviour
         string jsonData = File.ReadAllText(path);
         data = JsonUtility.FromJson<Data>(jsonData);
     }
+
 }

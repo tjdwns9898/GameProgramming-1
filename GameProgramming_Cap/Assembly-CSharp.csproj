@@ -69,6 +69,7 @@
     <Compile Include="Assets\Script\Bug.cs" />
     <Compile Include="Assets\Script\BugController.cs" />
     <Compile Include="Assets\Script\GameManager.cs" />
+    <Compile Include="Assets\Script\Growing rate\GrowingRate.cs" />
     <Compile Include="Assets\Script\MiniGameManager.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/potap/Desktop/Study/유니티/Git/GameProgramming/GameProgramming_Cap/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
