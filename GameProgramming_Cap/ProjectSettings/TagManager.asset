@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Button
   layers:
   - Default
   - TransparentFX
@@ -13,7 +14,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - Bug
   - 
   - 
   - 
@@ -40,4 +41,16 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: BackgroundLayer
+    uniqueID: 1330630535
+    locked: 0
+  - name: PlantLayer
+    uniqueID: 3304453453
+    locked: 0
+  - name: BugLayer
+    uniqueID: 3332918537
+    locked: 0
+  - name: New Layer
+    uniqueID: 1270648393
     locked: 0

@@ -4,41 +4,59 @@ using UnityEngine;
 
 public class Bug : MonoBehaviour
 {
-    Rigidbody2D rigid;
-    public int nextMove;
+    private bool isDead;
+    public float speed = 15.0f;
 
-
-    void Awake()
+    // Start is called before the first frame update
+    void Start()
     {
-        rigid = GetComponent<Rigidbody2D>();
-        Think();
-
-        Invoke("Think", 3);
-
+        InvokeRepeating("ChangeDirection", 0.5f, 0.5f);
     }
-    
-    void FixedUpdate()
-    {
-        rigid.velocity = new Vector2(nextMove, rigid.velocity.y);
 
-        Vector2 frontVec = new Vector2(rigid.position.x + nextMove*0.2f, rigid.position.y);
-        Debug.DrawRay(frontVec, Vector3.down, new Color(0, 1, 0));
-        RaycastHit2D rayHit = Physics2D.Raycast(frontVec, Vector3.down, 1, LayerMask.GetMask("Plant"));
-        if (rayHit.collider != null)
+    void ChangeDirection()
+    {
+        float angle = 0.0f;
+        int random = Random.Range(0, 3);
+
+        switch(random)
         {
-            nextMove *= -1;
-            CancelInvoke();
-            Invoke("Think", 3);
+            case 0:
+                angle = 45;
+                break;
+
+            case 1:
+                angle = 0;
+                break;
+
+            case 2:
+                angle = -45;
+                break;
         }
+
+        transform.Rotate(0.0f, 0.0f, angle);
+
     }
 
-    void Think()
+    // Update is called once per frame
+    void Update()
     {
-        nextMove = Random.Range(-1, 2);
+        if (isDead)
+            return;
 
-        float nextThinkTime = Random.Range(2f, 5f);
-        Invoke("Think", nextThinkTime);
+        transform.position += this.transform.up * speed * Time.deltaTime;
+    }
+
+    private void OnMouseDown()
+    {
+        isDead = true;
+        CancelInvoke();
 
 
+        Destroy(gameObject);
+    }
+
+    private void OnBecameInvisible()
+    {
+        Destroy(gameObject);
     }
 }

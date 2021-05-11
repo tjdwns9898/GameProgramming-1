@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 08607e16b8661c64cb8ff977d8b8b944
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - Menu: {fileID: 8581949119241809080, guid: 338cdde834c12374996b79fc5a65fd95, type: 3}
+  - MenuPanel: {fileID: 2041410119584067820, guid: fbadce36add87824b890a543a51f838f,
+      type: 3}
+  - Seed: {fileID: 8864205639822666455, guid: 7c913c22f4000c94189a02f5f115c3ee, type: 3}
+  - SeedPanel: {fileID: 8496527294895999024, guid: a6e733a8de8f9684abdec7cbc74b1f20,
+      type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

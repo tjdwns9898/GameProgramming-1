@@ -7,6 +7,8 @@ public class GameManager : MonoBehaviour
 {
     private static GameManager instance = null; //싱글톤
 
+    
+
     public GameObject MainCharacter_Plant; //중앙에 서있을 식물 이미지 이름
 
     public string Plant_time;   // 식물 심은 시간
@@ -48,6 +50,11 @@ public class GameManager : MonoBehaviour
             Destroy(this.gameObject);
 
         }
+    }
+
+    private void Update()
+    {
+        
     }
 
     public static GameManager Instance
